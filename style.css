@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Pacifico&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Newsreader", serif;
+}
+body{
+    background-color: black;
+    color: white;
+}
+
+.border {
+    border: 2px solid red;
+    margin: 3px;
+}
+
+.flex {
+    display: flex;
+}
+
+                                                /* Left box  */
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+              /* home  */
+.home ul li {
+    width: 1.2rem;
+    display: flex;
+    gap: 12px;
+    padding-top: 12px;
+    font-weight: bold;
+}
+             /* library  */
+
+.library{
+    min-height: 75vh;
+    position: relative;
+}
+.heading{
+    width: 100%;
+    display: flex;
+    gap: 12px;
+    padding-top: 12px;
+    font-weight: bold;
+    align-items: center;
+}
+.heading img{
+    width: 1.5rem;
+}
+.footer{
+    display: flex;
+    font-size: 12px;
+    gap: 15px;
+    position: absolute;
+    bottom: 2px;
+    
+}
+.footer a{
+    color: whitesmoke;
+}
+
+                                                /* Right box  */
+.right {
+    width: 75vw;
+    margin: 15px 0
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(50,50,50);
+}
+.header > *{
+    padding: 20px;
+}
+.buttons{
+    display: flex;
+    gap: 8px;
+}
+#btn2{
+    /* position: absolute; */
+    padding: 2px;
+    box-sizing: border-box;
+}
+.main h2{
+    padding: 13px;
+}
+.card-container{
+    display: flex;
+    /* gap: 10px; */
+    flex-wrap: wrap;
+}
+.card{
+    /* border: 2px solid red; */
+    width: 200px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #252525;
+    margin: 10px;
+    position: relative;
+}
+.card img{
+    width: 100%;
+    object-fit: contain;
+}
+.card > *{
+    padding-top: 8px;
+}
+.play{
+    position: absolute;
+    bottom: 79px;
+    right: 15px;
+    opacity: 0;
+    transition: all 0.5s ease-out;
+}
