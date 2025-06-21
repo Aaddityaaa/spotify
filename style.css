@@ -5,7 +5,8 @@
     margin: 0;
     font-family: "Newsreader", serif;
 }
-body{
+
+body {
     background-color: black;
     color: white;
 }
@@ -19,12 +20,13 @@ body{
     display: flex;
 }
 
-                                                /* Left box  */
+/* Left box  */
 .left {
     width: 25vw;
     padding: 10px;
 }
-              /* home  */
+
+/* home  */
 .home ul li {
     width: 1.2rem;
     display: flex;
@@ -32,13 +34,15 @@ body{
     padding-top: 12px;
     font-weight: bold;
 }
-             /* library  */
 
-.library{
+/* library  */
+
+.library {
     min-height: 75vh;
     position: relative;
 }
-.heading{
+
+.heading {
     width: 100%;
     display: flex;
     gap: 12px;
@@ -46,71 +50,130 @@ body{
     font-weight: bold;
     align-items: center;
 }
-.heading img{
+
+.heading img {
     width: 1.5rem;
 }
-.footer{
+
+.footer {
     display: flex;
     font-size: 12px;
     gap: 15px;
     position: absolute;
     bottom: 2px;
-    
+    flex-wrap: wrap;
+    padding: 5px;
+
 }
-.footer a{
+
+.footer a {
     color: whitesmoke;
 }
 
-                                                /* Right box  */
+/* Right box  */
 .right {
     width: 75vw;
-    margin: 15px 0
+    margin: 15px 0;
+    max-height: 100vh;
 }
-.header{
+
+.header {
     display: flex;
     justify-content: space-between;
-    background-color: rgb(50,50,50);
+    background-color: rgb(50, 50, 50);
 }
-.header > *{
+
+.header>* {
     padding: 20px;
 }
-.buttons{
-    display: flex;
-    gap: 8px;
+
+.buttons>* {
+    margin: 0 10px;
+    font-size: medium;
+    cursor: pointer;
 }
-#btn2{
-    /* position: absolute; */
-    padding: 2px;
-    box-sizing: border-box;
+
+#signup-btn {
+    font-weight: bold;
+    background-color: rgb(50, 50, 50);
+    color: rgba(255, 255, 255, 0.825);
+    border: none;
+    outline: none;
 }
-.main h2{
+
+#signup-btn:hover {
+    color: white;
+    font-size: 1.08rem;
+}
+
+#login-btn {
+    border-radius: 16px;
+    font-weight: 500;
+    width: 82px;
+    height: 34px;
+}
+
+#login-btn:hover {
+    font-weight: 700;
+    transform: scaleX(1.02);
+}
+
+
+.main h2 {
     padding: 13px;
 }
-.card-container{
+
+.card-container {
     display: flex;
     /* gap: 10px; */
     flex-wrap: wrap;
+    overflow-y: scroll;
+    max-height: 65vh;
 }
-.card{
+
+.card {
     /* border: 2px solid red; */
-    width: 200px;
+    width: 150px;
     padding: 10px;
     border-radius: 15px;
     background-color: #252525;
     margin: 10px;
     position: relative;
 }
-.card img{
+
+.card img {
     width: 100%;
     object-fit: contain;
 }
-.card > *{
+
+.card>* {
     padding-top: 8px;
 }
-.play{
+
+.play {
     position: absolute;
-    bottom: 79px;
+    bottom: 96px;
     right: 15px;
     opacity: 0;
     transition: all 0.5s ease-out;
+}
+
+/* //playbar   */
+.right {
+    position: relative;
+}
+
+.playbar {
+    position: absolute;
+    bottom: 0;
+    background-color: greenyellow;
+    width: 95%;
+    color: black;
+    padding: 10px;
+}
+
+.songbuttons {
+    display: flex;
+    justify-content: center;
+    gap: 9px;
 }
