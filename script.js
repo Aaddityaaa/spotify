@@ -17,7 +17,7 @@ let getSongs = async () => {
     let mp3Links = Array.from(links)
         .map(link => link.getAttribute("href"))
         .filter(href => href && href.endsWith(".mp3"))
-        .map(href => new URL(href, baseUrl).href);
+        .map(href => new URL(href, baseUrl).href.split("/songs/")[1]);
     return mp3Links;
 
 };
@@ -25,10 +25,12 @@ let getSongs = async () => {
 let main = async () => {
     //Get the list of all the songs
     let songs = await getSongs();
-    songs.forEach(song => {
-        console.log("🎵 Song:", song);
-    });
+    console.log(songs)
 
+    let songUL = document.querySelector(".songlist").getElementsByTagName("ul")[0]
+    songs.forEach(song => {
+        songUL.innerHTML += `<li> ${song} </li>`;
+    });
     //Play the first song
     var audio = new Audio(songs[6]);
     audio.play();

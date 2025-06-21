@@ -55,6 +55,23 @@ body {
     width: 1.5rem;
 }
 
+.songlist ul{
+    padding: 0 40px;
+    margin-top: 25px;
+    max-height: 100px;
+    /* display: flex; */
+}
+.songlist ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    padding: 10px 0;
+    border: 1px solid white;
+    margin: 5px;
+}
+
+
 .footer {
     display: flex;
     font-size: 12px;
