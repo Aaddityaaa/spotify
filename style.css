@@ -207,18 +207,42 @@ body {
     padding: 13px;
 }
 
-.card-container {
+.cardContainer {
     display: flex;
     /* gap: 10px; */
     flex-wrap: wrap;
     overflow-y: auto;
-    max-height: 65vh;
+    max-height: 60vh;
+    justify-content: center;
+    
+}
+
+/* Custom scrollbar for WebKit browsers */
+.cardContainer::-webkit-scrollbar {
+    width: 8px;
+    /* width of the scrollbar */
+}
+
+.cardContainer::-webkit-scrollbar-track {
+    background: #111;
+    /* dark track background */
+}
+
+.cardContainer::-webkit-scrollbar-thumb {
+    background-color: black;
+    /* black scrollbar handle */
+    border-radius: 4px;
+}
+
+/* Optional: scrollbar corner */
+.cardContainer::-webkit-scrollbar-corner {
+    background: #111;
 }
 
 .card {
     /* border: 2px solid red; */
-    width: 120px;
-    height: 200px;
+    width: 150px;
+    height: 230px;
     padding: 10px;
     border-radius: 12px;
     background-color: #252525;
@@ -241,7 +265,7 @@ body {
 }
 
 .card p {
-    font-size: 12px;
+    font-size: 13px;
 }
 
 .play {
@@ -356,6 +380,7 @@ body {
     transition: left 0.3s;
 }
 
+
 @media (max-width: 1150px) {
     .left {
         /* background-color: red; */
@@ -426,5 +451,10 @@ body {
         grid-area: buttons;
         justify-self: center;
     }
+    
 
+}
+
+.input-search{
+    display: none;
 }
