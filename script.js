@@ -6,7 +6,7 @@ let mp3Links;
 
 let getSongs = async (folder) => {
     currFolder = folder;
-    let a = await fetch(`http://127.0.0.1:5500/spotify/assects/${folder}/`);
+    let a = await fetch(`assects/songs/${folder}/`);
     let response = await a.text();
 
     let div = document.createElement("div");
@@ -88,7 +88,7 @@ const playMusic = (track, pause = false) => {
 };
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:5500/spotify/assects/songs/`);
+    let a = await fetch(`assects/songs/`);
     let response = await a.text();
     let div = document.createElement("div");
     div.innerHTML = response;
@@ -103,7 +103,7 @@ async function displayAlbums() {
         if (e.href.includes("/songs")) {
             let folder = e.href.split("/").slice(-2)[1];
             try {
-                let a = await fetch(`http://127.0.0.1:5500/spotify/assects/songs/${folder}/info.json`);
+                let a = await fetch(`assects/songs/${folder}/info.json`);
                 if (!a.ok) throw new Error("Missing info.json");
                 let response = await a.json();
 
